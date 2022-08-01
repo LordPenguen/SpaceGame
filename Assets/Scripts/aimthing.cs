@@ -14,11 +14,10 @@ public class aimthing : MonoBehaviour
     public float angle = 0;
     public float angle2 = 0;
 
-    private Vector2 restartPoint;
     public int counter = 0;
 
     void Awake() {
-        restartPoint = transform.position;
+       
     }
 
 
@@ -37,10 +36,8 @@ public class aimthing : MonoBehaviour
 
         //Debug.Log(aim);
 
-        //If pressed space stop & restart the line & count bullets
+        //If pressed space stop & count bullets
         if(Input.GetButtonDown("Jump")){
-            dir=0;
-           // transform.position = restartPoint;
             counter++;
         }
         
