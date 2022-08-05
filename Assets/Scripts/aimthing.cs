@@ -31,8 +31,12 @@ public class aimthing : MonoBehaviour
         angle = Vector2.Angle(point,aim);
         angle2 = Vector2.Angle(point2,aim); 
 
-        if(angle == 0f) dir = dir * (-1);
-        if(angle2 == 0f) dir = dir * (-1);
+        if(angle > 0f){ 
+            angle=0;
+            dir = dir * (-1);}
+        if(angle2 < 0f) {
+            angle2=0;
+            dir = dir * (-1);}
 
         //Debug.Log(aim);
 
