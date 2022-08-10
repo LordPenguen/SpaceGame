@@ -9,12 +9,11 @@ public class Background : MonoBehaviour
     {
         transform.position += new Vector3(0,-2f*Time.deltaTime);
 
-        if(transform.position.y< -10.8){
+        if(transform.position.y < -10.8){
             
             transform.position = new Vector3(transform.position.x,10.8f);
         }
 
        
-
     }
 }
