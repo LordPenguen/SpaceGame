@@ -2,32 +2,49 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class Levels : MonoBehaviour
 {
+    public GameObject playPanel;
+    public GameObject levelPanel;
+    public GameObject MenuPanel;
 
-    public GameObject camera;
-    public Vector3 down;
+    int levelsUnlocked;
+
+    public Button[] buttons;
+
+    public void Start(){
+
+        levelsUnlocked = PlayerPrefs.GetInt("levelsUnlocked",1);
+
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            if(i+1 >levelsUnlocked)
+                buttons[i].interactable=false;
+        }
+
+    }
 
 
-    void Start()
-    {
+    public void Unseeble(){
+
+    playPanel.gameObject.SetActive(false);
+
+   }
+
+   public void chooseLevel(){
+
+    MenuPanel.gameObject.SetActive(false);
+    levelPanel.gameObject.SetActive(true);
+
+   }
+
+   public void ChangeLevel(int levelIndex){
+
+    SceneManager.LoadScene(levelIndex);
     
-        
-    }
+   }
 
-    public void Slide(){
-
-        Vector3 desiredPosition = camera.transform.position + down;
-
-        camera.transform.position = desiredPosition;
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
