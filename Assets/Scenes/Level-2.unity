@@ -353,6 +353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particle: {fileID: 4987380207565471981, guid: 69e110ca94b518a40a8ce3e1976ed668, type: 3}
+  count: 1
 --- !u!1 &191864102
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,6 +775,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 622795104}
   m_CullTransparentMesh: 1
+--- !u!1 &889061300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 889061302}
+  - component: {fileID: 889061301}
+  m_Layer: 0
+  m_Name: gameovercheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &889061301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889061300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d925ba35bb5cee74eb1da7cfecb09737, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Udead: 0
+--- !u!4 &889061302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889061300}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.08655456, y: 0.31868094, z: -0.26029956}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &953986749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1248,6 +1293,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1964141616}
   - component: {fileID: 1964141617}
+  - component: {fileID: 1964141618}
   m_Layer: 0
   m_Name: Viper
   m_TagString: Untagged
@@ -1320,3 +1366,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1964141618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964141615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd44e3927512ac449bcb4eb73f7002e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HowManyEnemy: 1
+  gm: {fileID: 889061301}
+  enm: {fileID: 94519713}
