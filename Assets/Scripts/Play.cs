@@ -19,6 +19,24 @@ public class Play : MonoBehaviour
 
         SceneManager.LoadScene(1);
     }
+
+    public void NewGame(){
+
+        PlayerPrefs.SetInt("levelsUnlocked",1);
+    }
+
+    public void ContinueGame(){
+
+        int GoToLevel = PlayerPrefs.GetInt("levelsUnlocked");
+
+        SceneManager.LoadScene(GoToLevel);
+        
+    }
+
+    public void GoToMainmenu(){
+
+        SceneManager.LoadScene(0);
+    }
     
     public void QuitGame()
     {

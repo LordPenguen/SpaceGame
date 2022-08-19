@@ -13,10 +13,11 @@ public class check : MonoBehaviour
         mama--;
 
         if(mama <=0){
-
+            
+            gm.enemyCheck = false;
             gm.NextLevel();
-            gm.EndGame();
         }
+
       
     }
 

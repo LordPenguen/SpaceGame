@@ -5,18 +5,20 @@ public class Shooting : MonoBehaviour
 
     public Transform firepoint;
     public GameObject bulletPrefab;
+    public GameOver GM;
 
     [SerializeField] private GameObject[] ammo;
 
-    private int counter=0;
+    public int counter=0;
 
     public float bulletForce = 1f;
 
     void Start() {
-
+        //uı için dönen ammo lar
         for(int i=0; i<4; i++){
 
-            ammo[i].gameObject.SetActive(true);
+        ammo[i].gameObject.SetActive(true);
+
         }
         
     }
@@ -31,6 +33,7 @@ public class Shooting : MonoBehaviour
 
     void Shoot(){
 
+        //shooting & counting ammos
         if(counter<4){
 
         GameObject bullet = Instantiate(bulletPrefab, firepoint.position, firepoint.rotation);
@@ -39,6 +42,13 @@ public class Shooting : MonoBehaviour
 
         ammo[counter].gameObject.SetActive(false);
         counter++;
+        }
+
+        //out of ammo ++bir tane variable true yap
+        if(counter==4) {
+
+        GM.ammoCheck = true;
+        GM.EndGame();
         }
 
     }

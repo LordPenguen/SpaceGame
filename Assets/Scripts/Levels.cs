@@ -19,6 +19,7 @@ public class Levels : MonoBehaviour
 
         levelsUnlocked = PlayerPrefs.GetInt("levelsUnlocked",1);
 
+        //level tuşlarını kapama şeysi
         for (int i = 0; i < buttons.Length; i++)
         {
             if(i+1 >levelsUnlocked)
