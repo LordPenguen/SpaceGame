@@ -7,10 +7,18 @@ using UnityEngine.SceneManagement;
 public class HowToPlay : MonoBehaviour
 {
    public GameObject playPanel;
+   public GameObject HTPPanel;
+   public GameObject BG;
 
    public void Unseeble(){
 
     playPanel.gameObject.SetActive(false);
+   }
+
+   public void OpenHTP(){
+
+      HTPPanel.gameObject.SetActive(true);
+      BG.gameObject.SetActive(false);
    }
 
 }

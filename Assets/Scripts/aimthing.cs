@@ -16,9 +16,6 @@ public class aimthing : MonoBehaviour
 
     public int counter = 0;
 
-    void Awake() {
-       
-    }
 
 
     void Update()
@@ -36,7 +33,7 @@ public class aimthing : MonoBehaviour
 
         //Debug.Log(aim);
 
-        //If pressed space stop & count bullets
+        //If pressed space count bullets
         if(Input.GetButtonDown("Jump")){
             counter++;
         }

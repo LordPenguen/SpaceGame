@@ -29,10 +29,12 @@ public class GameOver : MonoBehaviour
 
     //Text Can change depending how u ended? -Out of ammo -Enemis killed u?
     //if out of ammo & enemis alive GameOverScreen becomes visible
-   public void EndGame(){
+   public IEnumerator EndGame(){ 
+
+        yield return new WaitForSeconds(.5f);
 
         if(ammoCheck && enemyCheck){
-            
+
             GOS.gameObject.SetActive(true);
         }
 

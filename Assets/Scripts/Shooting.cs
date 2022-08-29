@@ -48,7 +48,7 @@ public class Shooting : MonoBehaviour
         if(counter==4) {
 
         GM.ammoCheck = true;
-        GM.EndGame();
+        StartCoroutine(GM.EndGame());
         }
 
     }
