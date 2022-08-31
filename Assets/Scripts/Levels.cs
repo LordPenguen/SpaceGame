@@ -27,6 +27,13 @@ public class Levels : MonoBehaviour
         }
 
     }
+    
+    public void Back(){
+
+        MenuPanel.gameObject.SetActive(true);
+        levelPanel.gameObject.SetActive(false);
+        
+    }
 
 
     public void Unseeble(){

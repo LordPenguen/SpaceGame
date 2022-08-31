@@ -27,15 +27,7 @@ public class Enemies : MonoBehaviour
 
   void EnemyType2(){
 
-
-  }
-  
-
-  void Update() {
-
-    if(enemy == 2){
-
-      if(Vector2.Distance(transform.position, points[i].position) < 0.02f){
+    if(Vector2.Distance(transform.position, points[i].position) < 0.02f){
 
         i++;
 
@@ -47,7 +39,23 @@ public class Enemies : MonoBehaviour
 
       transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
 
+
+  }
+  
+
+  void Update() {
+
+    if(enemy == 2){
+
+    EnemyType2();
+    
     }
+
+
+
+
+
+    
     
   }
 

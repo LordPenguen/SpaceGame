@@ -7,6 +7,8 @@ using DG.Tweening;
 
 public class DialougeManager : MonoBehaviour
 {
+    public GameObject MainMenu;
+    public GameObject HTP;
 
     [SerializeField] private Dialouge dia;
 
@@ -34,6 +36,13 @@ public class DialougeManager : MonoBehaviour
         textTalk = transform.Find("talkPanel").Find("talk11").GetComponent<TMP_Text>();
 
         at.dir = 0;
+    }
+
+    public void Back(){
+
+        MainMenu.gameObject.SetActive(true);
+        HTP.gameObject.SetActive(false);
+        
     }
 
     public void nextText(){
