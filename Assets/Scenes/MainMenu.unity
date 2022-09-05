@@ -284,14 +284,15 @@ MonoBehaviour:
   HTP: {fileID: 2141750425}
   dia: {fileID: 17418357}
   textTalk: {fileID: 1774592469}
+  i: 0
   Pics:
   - {fileID: 151444590}
-  - {fileID: 410980137}
+  - {fileID: 407638651}
   - {fileID: 407638651}
   - {fileID: 410980137}
   - {fileID: 410980137}
-  - {fileID: 410980137}
   - {fileID: 1761044299}
+  - {fileID: 410980137}
   - {fileID: 410980137}
   - {fileID: 410980137}
   - {fileID: 410980137}
@@ -302,6 +303,7 @@ MonoBehaviour:
   firepoint: {fileID: 370934117}
   bulletPrefab: {fileID: 3310727966260302753, guid: 83b89bf9780879b4e888dd0cab6ff898, type: 3}
   bulletForce: 2
+  backclicked: 0
   ammo:
   - {fileID: 1319655074}
   - {fileID: 298522890}
@@ -2846,7 +2848,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8562028424135131155, guid: 60244dc0e61d7c54988beb309be51083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562028424135131155, guid: 60244dc0e61d7c54988beb309be51083, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 17418358}
+    - target: {fileID: 8562028424135131155, guid: 60244dc0e61d7c54988beb309be51083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 17418358}
     - target: {fileID: 8562028424135131155, guid: 60244dc0e61d7c54988beb309be51083, type: 3}
@@ -2854,15 +2864,31 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8562028424135131155, guid: 60244dc0e61d7c54988beb309be51083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562028424135131155, guid: 60244dc0e61d7c54988beb309be51083, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562028424135131155, guid: 60244dc0e61d7c54988beb309be51083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OutofHTP
       objectReference: {fileID: 0}
     - target: {fileID: 8562028424135131155, guid: 60244dc0e61d7c54988beb309be51083, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: DialougeManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8562028424135131155, guid: 60244dc0e61d7c54988beb309be51083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DialougeManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562028424135131155, guid: 60244dc0e61d7c54988beb309be51083, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562028424135131155, guid: 60244dc0e61d7c54988beb309be51083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8562028424135131164, guid: 60244dc0e61d7c54988beb309be51083, type: 3}
@@ -5513,6 +5539,7 @@ MonoBehaviour:
   playPanel: {fileID: 889121085}
   HTPPanel: {fileID: 2141750425}
   BG: {fileID: 1882170854}
+  DM: {fileID: 17418358}
 --- !u!1 &2141750425
 GameObject:
   m_ObjectHideFlags: 0

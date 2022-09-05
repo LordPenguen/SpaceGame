@@ -16,10 +16,13 @@ public class aimthing : MonoBehaviour
 
     public int counter = 0;
 
+    public bool deneme=true;
+
 
 
     void Update()
     {  
+        
         //Makes it rotate around our spaceship
         transform.RotateAround(rotationCenter.transform.position, Vector3.forward, dir*Time.deltaTime);
 
@@ -31,15 +34,20 @@ public class aimthing : MonoBehaviour
         if(angle <= 0f) dir = dir * (-1);
         if(angle2 <= 0f) dir = dir * (-1);
 
-        //Debug.Log(aim);
 
         //If pressed space count bullets
         if(Input.GetButtonDown("Jump")){
             counter++;
         }
-        
+
+
+       
      
     }
+
+
+    
+
 
   
 

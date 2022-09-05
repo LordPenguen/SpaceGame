@@ -338,7 +338,7 @@ Transform:
   m_LocalScale: {x: 4, y: -4, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &94519713
 MonoBehaviour:
@@ -387,9 +387,8 @@ Transform:
   m_Children:
   - {fileID: 1964141616}
   - {fileID: 953986750}
-  - {fileID: 212952975}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &212952974
 GameObject:
@@ -422,7 +421,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 579667915}
-  m_Father: {fileID: 191864103}
+  m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &212952976
@@ -445,6 +444,7 @@ MonoBehaviour:
   angle: 0
   angle2: 0
   counter: 0
+  deneme: 1
 --- !u!212 &212952977
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -923,8 +923,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GOS: {fileID: 1015567165}
+  GOS2: {fileID: 0}
   ammoCheck: 0
   enemyCheck: 1
+  ck: {fileID: 889061303}
+  at: {fileID: 212952976}
 --- !u!4 &889061302
 Transform:
   m_ObjectHideFlags: 0
@@ -937,7 +940,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &889061303
 MonoBehaviour:
@@ -953,6 +956,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gm: {fileID: 889061301}
   mama: 1
+  viper: {fileID: 1964141618}
+  Udead: 0
+  enemy: {fileID: 94519713}
 --- !u!1 &953986749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,7 +1195,7 @@ RectTransform:
   - {fileID: 1647714152}
   - {fileID: 388632379}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1260,7 +1266,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1347118528
 GameObject:
@@ -1736,3 +1742,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd44e3927512ac449bcb4eb73f7002e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particle: {fileID: 0}
+  ck: {fileID: 0}

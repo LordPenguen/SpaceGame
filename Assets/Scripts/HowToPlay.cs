@@ -10,6 +10,8 @@ public class HowToPlay : MonoBehaviour
    public GameObject HTPPanel;
    public GameObject BG;
 
+   public DialougeManager DM;
+
    public void Unseeble(){
 
     playPanel.gameObject.SetActive(false);
@@ -19,6 +21,8 @@ public class HowToPlay : MonoBehaviour
 
       HTPPanel.gameObject.SetActive(true);
       BG.gameObject.SetActive(false);
+      DM.backclicked=false;
    }
 
+  
 }

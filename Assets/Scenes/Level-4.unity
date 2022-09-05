@@ -445,6 +445,7 @@ MonoBehaviour:
   angle: 0
   angle2: 0
   counter: 0
+  deneme: 1
 --- !u!212 &212952977
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1843,6 +1844,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gm: {fileID: 1980980004}
   mama: 3
+  viper: {fileID: 0}
+  Udead: 0
+  enemy: {fileID: 0}
 --- !u!114 &1980980004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1856,8 +1860,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GOS: {fileID: 2048022835}
+  GOS2: {fileID: 0}
   ammoCheck: 0
   enemyCheck: 1
+  ck: {fileID: 1980980003}
+  at: {fileID: 212952976}
 --- !u!4 &1980980005
 Transform:
   m_ObjectHideFlags: 0

@@ -445,6 +445,7 @@ MonoBehaviour:
   angle: 0
   angle2: 0
   counter: 0
+  deneme: 1
 --- !u!212 &212952977
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -731,8 +732,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GOS: {fileID: 287162076}
+  GOS2: {fileID: 0}
   ammoCheck: 0
   enemyCheck: 1
+  ck: {fileID: 390514137}
+  at: {fileID: 212952976}
 --- !u!4 &390514136
 Transform:
   m_ObjectHideFlags: 0
@@ -761,6 +765,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gm: {fileID: 390514135}
   mama: 2
+  viper: {fileID: 1964141618}
+  Udead: 0
+  enemy: {fileID: 94519713}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1864,3 +1871,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd44e3927512ac449bcb4eb73f7002e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particle: {fileID: 0}
+  ck: {fileID: 0}

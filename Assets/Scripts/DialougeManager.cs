@@ -14,7 +14,7 @@ public class DialougeManager : MonoBehaviour
 
     public TMP_Text textTalk;
     string mesText;
-    int i;
+    public int i;
 
     [SerializeField] private GameObject[] Pics;
     public Transform viper;
@@ -27,9 +27,11 @@ public class DialougeManager : MonoBehaviour
     public GameObject bulletPrefab;
     public float bulletForce = 1f;
 
-    
+    public bool backclicked;
+
 
     [SerializeField] private GameObject[] ammo;
+    
 
     void Awake() {
 
@@ -42,6 +44,13 @@ public class DialougeManager : MonoBehaviour
 
         MainMenu.gameObject.SetActive(true);
         HTP.gameObject.SetActive(false);
+
+        backclicked = true;
+
+        if(backclicked){
+            HTPstart();
+        }
+
         
     }
 
@@ -57,7 +66,7 @@ public class DialougeManager : MonoBehaviour
             "Be carefull captain and good luck...Because you gonna need it."
         };
 
-        Pics[i+1].gameObject.SetActive(true);
+        Pics[i].gameObject.SetActive(true);
 
         if ( i <= 9 )
         {
@@ -68,7 +77,6 @@ public class DialougeManager : MonoBehaviour
         }  
 
         TweeninObjects();
-        
         
     }
 
@@ -112,11 +120,9 @@ public class DialougeManager : MonoBehaviour
             StartCoroutine(Couple());
 
             ammo[1].gameObject.SetActive(false);
-
             
         }
-        
-        
+            
     }   
 
     IEnumerator Stoppin(){
@@ -132,6 +138,20 @@ public class DialougeManager : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firepoint.position, firepoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firepoint.up * bulletForce, ForceMode2D.Impulse);
+
+
+    }
+
+   public void HTPstart(){
+    
+         int j;
+         //Pic array = 0
+            for(j=0;j<=i;j++){
+            Pics[j].gameObject.SetActive(false);
+            }  
+         //String array = 0
+            if(j==i) i=0;
+            textTalk.gameObject.SetActive(false);
 
 
     }

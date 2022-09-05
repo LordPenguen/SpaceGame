@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class Viper : MonoBehaviour
 {
+    [SerializeField] ParticleSystem particle;
 
-    void Start()
-    {
+    public check ck;
+
+    private void OnTriggerEnter2D(Collider2D other) {
         
-    }
-    
-    void Update()
-    {
-        
+        if(other.gameObject.tag=="enemy"){
+
+        Instantiate(particle,transform.position,Quaternion.identity);
+        Destroy(gameObject);
+
+        ck.CheckAlive();
+        }
         
     }
 

@@ -1,11 +1,13 @@
 using UnityEngine;
 
+
 public class Shooting : MonoBehaviour
 {
 
     public Transform firepoint;
     public GameObject bulletPrefab;
     public GameOver GM;
+    
 
     [SerializeField] private GameObject[] ammo;
 
@@ -19,8 +21,7 @@ public class Shooting : MonoBehaviour
 
         ammo[i].gameObject.SetActive(true);
 
-        }
-        
+        } 
     }
     
     void Update()
@@ -52,5 +53,8 @@ public class Shooting : MonoBehaviour
         }
 
     }
+
+
+    
       
 }
