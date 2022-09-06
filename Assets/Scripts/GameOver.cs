@@ -18,6 +18,15 @@ public class GameOver : MonoBehaviour
 
     public Animator Anim;
 
+    private AudioClip ExpSound;
+    public AudioSource audioSource;
+
+
+    private void Start() {
+
+        ExpSound = (AudioClip)Resources.Load("exp1");
+
+    }
 
 
     //unlocks next level
@@ -34,10 +43,7 @@ public class GameOver : MonoBehaviour
 
         //if last level(scene16) play credits
         if(currentLevel==16) StartCoroutine(NextScene());
-
-        
-        //and maybe open a credits button bottom left
-        //
+ 
 
     }
 
@@ -45,7 +51,11 @@ public class GameOver : MonoBehaviour
     //if enemy hits u screeen
     public void GameEnd(){
 
-        GOS2.gameObject.SetActive(true);
+        audioSource.clip = ExpSound;
+        audioSource.Play();
+
+        if(ammoCheck) GOS2.gameObject.SetActive(false);
+        else GOS2.gameObject.SetActive(true);
         
 
     }

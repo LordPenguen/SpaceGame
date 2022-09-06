@@ -22,6 +22,10 @@ public class HowToPlay : MonoBehaviour
       HTPPanel.gameObject.SetActive(true);
       BG.gameObject.SetActive(false);
       DM.backclicked=false;
+
+      DM.HTPEnd();
+
+
    }
 
   

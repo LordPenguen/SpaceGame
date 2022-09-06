@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 
 public class Shooting : MonoBehaviour
@@ -15,13 +16,17 @@ public class Shooting : MonoBehaviour
 
     public float bulletForce = 1f;
 
+    private AudioClip bulletSound;
+    public AudioSource audioSource;
+
     void Start() {
         //uı için dönen ammo lar
         for(int i=0; i<4; i++){
 
         ammo[i].gameObject.SetActive(true);
-
         } 
+
+        bulletSound = (AudioClip)Resources.Load("laser2");
     }
     
     void Update()
@@ -29,6 +34,7 @@ public class Shooting : MonoBehaviour
         if(Input.GetButtonDown("Jump"))
         {
             Shoot();
+            
         }
     }
 
@@ -43,10 +49,13 @@ public class Shooting : MonoBehaviour
 
         ammo[counter].gameObject.SetActive(false);
         counter++;
+
+        audioSource.clip=bulletSound;
+        audioSource.Play();
         }
 
         //out of ammo ++bir tane variable true yap
-        if(counter==4) {
+        if(counter==4) { 
 
         GM.ammoCheck = true;
         StartCoroutine(GM.EndGame());

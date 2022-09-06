@@ -150,17 +150,20 @@ public class DialougeManager : MonoBehaviour
     }
 
    public void HTPstart(){
-    
          int j;
          //Pic array = 0
             for(j=0;j<=i;j++){
             Pics[j].gameObject.SetActive(false);
             }  
-         //String array = 0
-            if(j==i) i=0;
-            textTalk.gameObject.SetActive(false);
-
-
+    }
+    
+    public void HTPEnd(){
+    
+         int k;
+         //Pic array = 0
+            for(k=0;k<=i;k++){
+            Pics[k].gameObject.SetActive(true);
+            }  
 
     }
    

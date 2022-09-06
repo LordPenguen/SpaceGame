@@ -12,10 +12,22 @@ public class check : MonoBehaviour
 
     public Enemies enemy;
 
+    private AudioClip ExpSound;
+    public AudioSource audioSource;
+
+
+    private void Start() {
+
+        ExpSound = (AudioClip)Resources.Load("exp2");
+
+    }
 
     public void checkin(){
 
         mama--;
+
+        audioSource.clip = ExpSound;
+        audioSource.Play();
 
         if(mama <=0){
             
