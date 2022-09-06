@@ -15,7 +15,9 @@ public class GameOver : MonoBehaviour
 
     public check ck;
     public aimthing at;
-    
+
+    public Animator Anim;
+
 
 
     //unlocks next level
@@ -23,14 +25,19 @@ public class GameOver : MonoBehaviour
 
         currentLevel = SceneManager.GetActiveScene().buildIndex;
 
-        if(currentLevel >= PlayerPrefs.GetInt("levelsUnlocked")){
+        if(currentLevel <= PlayerPrefs.GetInt("levelsUnlocked")){
 
             PlayerPrefs.SetInt("levelsUnlocked", currentLevel+1);
 
             StartCoroutine(NextScene());
         }
 
-        Debug.Log("levl"+PlayerPrefs.GetInt("levelsUnlocked")+"unlckd");
+        //if last level(scene16) play credits
+        if(currentLevel==16) StartCoroutine(NextScene());
+
+        
+        //and maybe open a credits button bottom left
+        //
 
     }
 
@@ -60,7 +67,9 @@ public class GameOver : MonoBehaviour
 
      public IEnumerator NextScene(){ 
 
-        yield return new WaitForSeconds(.5f);
+        Anim.SetTrigger("StartAnim");
+
+        yield return new WaitForSeconds(.5f); 
 
         SceneManager.LoadScene(currentLevel+1);
         

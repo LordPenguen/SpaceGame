@@ -537,7 +537,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2192097245797988183}
         m_TargetAssemblyTypeName: Play, Assembly-CSharp
-        m_MethodName: ContinueGame
+        m_MethodName: ContinueLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

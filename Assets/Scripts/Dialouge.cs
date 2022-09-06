@@ -16,6 +16,9 @@ public class Dialouge : MonoBehaviour
 
     [SerializeField] private DialougeManager diaMan;
 
+    public bool pengu;
+    public GameObject Peng;
+
 
     public void AddWriter(TMP_Text spaceText, string textToWrite, float timePerChar, bool invisibleChar ){
 
@@ -50,6 +53,15 @@ public class Dialouge : MonoBehaviour
 
                 if(invisibleChar){
                     text += "<color=#00000000>" + textToWrite.Substring(charIndex) + "</color>";
+
+                    if(pengu){
+                        Peng.gameObject.SetActive(true);
+                        pengu=false;
+                    }
+                    else{
+                        Peng.gameObject.SetActive(false);
+                        StartCoroutine(PenguinTalk());
+                    }
                 }
                 spaceText.text = text;
 
@@ -59,10 +71,20 @@ public class Dialouge : MonoBehaviour
                     return;
                 }
 
+
+
             } 
 
         
         }
+        
+    }
+
+    public IEnumerator PenguinTalk(){ 
+
+        yield return new WaitForSeconds(.3f);
+
+        pengu=true;
         
     }
 

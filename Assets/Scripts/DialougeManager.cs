@@ -66,15 +66,22 @@ public class DialougeManager : MonoBehaviour
             "Be carefull captain and good luck...Because you gonna need it."
         };
 
-        Pics[i].gameObject.SetActive(true);
+        
 
-        if ( i <= 9 )
+        if ( i < 7 )
         {
             mesText = talkArray[i];
 
             dia.AddWriter(textTalk, mesText, .05f ,true);
+            Pics[i].gameObject.SetActive(true);
+            
             i++;
+            
         }  
+
+        if(i==8) dia.AddWriter(textTalk,"Go to warzone, captain", .05f,true);
+
+        
 
         TweeninObjects();
         
@@ -154,7 +161,9 @@ public class DialougeManager : MonoBehaviour
             textTalk.gameObject.SetActive(false);
 
 
+
     }
+   
 
     
 }

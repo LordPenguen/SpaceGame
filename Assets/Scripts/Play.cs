@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Play : MonoBehaviour
 { 
     public GameObject GameSelect;
+    private int presentLevel;
 
 
     public void Seeable(){
@@ -27,10 +28,19 @@ public class Play : MonoBehaviour
 
     public void ContinueGame(){
 
-        int GoToLevel = PlayerPrefs.GetInt("levelsUnlocked");
+        int GoToLevel = PlayerPrefs.GetInt("LastPlayedLevel");
 
         SceneManager.LoadScene(GoToLevel);
         
+    }
+
+    public void ContinueLevel(){
+
+        presentLevel = SceneManager.GetActiveScene().buildIndex;
+
+        PlayerPrefs.SetInt("LastPlayedLevel",presentLevel);
+
+        SceneManager.LoadScene(presentLevel);
     }
 
     public void GoToMainmenu(){
@@ -42,6 +52,15 @@ public class Play : MonoBehaviour
     {
         Debug.Log("quit");
         Application.Quit();
+    }
+
+    public void SecretCredits(){
+
+        int Secret = PlayerPrefs.GetInt("levelsUnlocked");
+
+        if(Secret==17){
+            SceneManager.LoadScene(17);
+        }
     }
 
     

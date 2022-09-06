@@ -34,6 +34,15 @@ public class StopMenu : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+    public void RestartLevel(){
+
+        int Level = SceneManager.GetActiveScene().buildIndex;
+
+        SceneManager.LoadScene(Level);
+        
+        Time.timeScale = 1f;
+    }
+
     void Update()
     {
         if(Input.GetButtonDown("Cancel"))
